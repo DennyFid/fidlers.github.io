@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Fidler Family</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-post {
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .blog-date {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Fidler Family</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="family.html">Our Tree</a></li>
+            <li><a href="photos.html">Gallery</a></li>
+            <li><a href="blog.html" class="active">News</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="height: 50vh; padding-top: 100px; background: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1 style="font-size: 3rem;">Family News</h1>
+            <p>Updates, stories, and announcements.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Latest Updates</h2>
+        
+        <div class="blog-post">
+            <span class="blog-date">July 15, 2026</span>
+            <h3>Annual Family Reunion Planned</h3>
+            <p>We are thrilled to announce that this year's family reunion will take place at the lake house. Expect a weekend filled with fun, games, and storytelling. Please RSVP by August 1st.</p>
+        </div>
+        
+        <div class="blog-post">
+            <span class="blog-date">June 2, 2026</span>
+            <h3>Welcome the Newest Member!</h3>
+            <p>Congratulations to Sarah and John on the birth of their beautiful baby girl, Emily. Both mother and baby are doing wonderfully.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Fidler Family. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

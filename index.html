@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fidler Family</title>
+    <meta name="description" content="Welcome to the Fidler family portal. Explore our history, view recent photos, and catch up on family news.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Fidler Family</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="family.html">Our Tree</a></li>
+            <li><a href="photos.html">Gallery</a></li>
+            <li><a href="blog.html">News</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Fidler Family</h1>
+            <p>Our roots run deep, our stories are timeless. Connect, explore, and share in our family's journey.</p>
+            <a href="#explore" class="btn">Explore Our Journey</a>
+        </div>
+    </header>
+
+    <!-- Explore Section -->
+    <main id="explore" class="container">
+        <h2 class="section-title">Discover</h2>
+        
+        <div class="grid">
+            <!-- Family Tree Card -->
+            <article class="card" onclick="window.location.href='family.html'">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Tree" class="card-img">
+                <div class="card-content">
+                    <h3>Our Roots</h3>
+                    <p>Delve into the Fidler family history, explore our ancestral tree, and read stories from generations past.</p>
+                </div>
+            </article>
+
+            <!-- Photo Gallery Card -->
+            <article class="card" onclick="window.location.href='photos.html'">
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Photo Gallery" class="card-img">
+                <div class="card-content">
+                    <h3>Photo Gallery</h3>
+                    <p>A collection of cherished moments, from recent gatherings and vacations to restored historical photographs.</p>
+                </div>
+            </article>
+
+            <!-- Family News Card -->
+            <article class="card" onclick="window.location.href='blog.html'">
+                <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family News" class="card-img">
+                <div class="card-content">
+                    <h3>Family News</h3>
+                    <p>Stay up to date with the latest announcements, achievements, and events happening across the Fidler family.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 The Fidler Family. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Designed with love & imagination.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
