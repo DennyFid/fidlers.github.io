@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denny's Cars - Fidler Family</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .garage-hero {
+            height: 60vh;
+            padding-top: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .garage-hero h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .showroom {
+            background-color: #111;
+            color: #fff;
+            padding: 5rem 2rem;
+            min-height: 100vh;
+        }
+
+        .showroom .section-title {
+            color: #fff;
+        }
+
+        .showroom .section-title::after {
+            background: var(--accent-color);
+        }
+
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .vehicle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vehicle-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #1a1a1a;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .vehicle-info {
+            padding: 2rem;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .vehicle-info h3 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .vehicle-price {
+            display: inline-block;
+            background: rgba(217, 119, 6, 0.15);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .vehicle-price::before {
+            content: "Est. new price: ";
+            color: #aaa;
+            font-weight: 400;
+        }
+
+        .vehicle-info p {
+            color: #ddd;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .vehicle-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body style="background: #111;">
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" style="color: #fff;">Fidler Family</a>
+        <ul class="nav-links">
+            <li><a href="index.html" style="color: #fff;">Home</a></li>
+            <li><a href="family.html" style="color: #fff;">Our Tree</a></li>
+            <li><a href="photos.html" style="color: #fff;">Gallery</a></li>
+            <li><a href="blog.html" style="color: #fff;">News</a></li>
+            <li><a href="cars.html" class="active" style="color: var(--accent-color);">Denny's Cars</a></li>
+        </ul>
+    </nav>
+
+    <header class="garage-hero">
+        <div>
+            <h1>Denny's Garage</h1>
+            <p style="font-size: 1.5rem; margin-top: 1rem; color: #aaa;">A showcase of cars, trucks, and motorcycles</p>
+        </div>
+    </header>
+
+    <main class="showroom">
+        <h2 class="section-title">The Collection</h2>
+        <div class="vehicle-grid">
+            <!-- 1: image14.png = 1941 Chevrolet Coupe -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image14.png" alt="1941 Chevrolet Coupe">
+                <div class="vehicle-info">
+                    <h3>1941 Chevrolet Coupe</h3>
+                    <span class="vehicle-price">$860</span>
+                    <p>Bought for $50 from Grandma Fidler. Named Black Sam, rebuilt engine in Engine Shop, it had
+                        knocking rods.</p>
+                </div>
+            </div>
+            <!-- 2: image12.png = 1929 Chrysler Roadster -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image12.png" alt="1929 Chrysler Roadster">
+                <div class="vehicle-info">
+                    <h3>1929 Chrysler Roadster</h3>
+                    <span class="vehicle-price">$1,595</span>
+                    <p>In neighbor's yard. Bought with Don Holm. Never got running, towed to junk yard, no brakes,
+                        exciting ride.</p>
+                </div>
+            </div>
+            <!-- 3: image15.png = 1934 Chevrolet -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image15.png" alt="1934 Chevrolet">
+                <div class="vehicle-info">
+                    <h3>1934 Chevrolet</h3>
+                    <span class="vehicle-price">$545</span>
+                    <p>Never got running. Bought from Tom Lind.</p>
+                </div>
+            </div>
+            <!-- 4: image8.png = 1951 Ford Convertible -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image8.png" alt="1951 Ford Convertible">
+                <div class="vehicle-info">
+                    <h3>1951 Ford Convertible</h3>
+                    <span class="vehicle-price">$2,110</span>
+                    <p>From Hartman.</p>
+                </div>
+            </div>
+            <!-- 5: image16.png = 1950 Ford Sedan -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image16.png" alt="1950 Ford Sedan">
+                <div class="vehicle-info">
+                    <h3>1950 Ford Sedan</h3>
+                    <span class="vehicle-price">$1,472</span>
+                    <p>Dropped the rear end burning rubber at Lewis and Clark Theatre. Sold to Peterson.</p>
+                </div>
+            </div>
+            <!-- 6: image6.png = 1947 Mercury -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image6.png" alt="1947 Mercury">
+                <div class="vehicle-info">
+                    <h3>1947 Mercury</h3>
+                    <span class="vehicle-price">$1,939</span>
+                    <p>Sold or gave to Gary.</p>
+                </div>
+            </div>
+            <!-- 7: image11.png = 1949 Chevrolet Convertible -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image11.png" alt="1949 Chevrolet Convertible">
+                <div class="vehicle-info">
+                    <h3>1949 Chevrolet Convertible</h3>
+                    <span class="vehicle-price">$1,857</span>
+                    <p>The one I had was baby blue. – sold to Harrison.</p>
+                </div>
+            </div>
+            <!-- 8: image30.png = 1949 Dodge -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image30.png" alt="1949 Dodge">
+                <div class="vehicle-info">
+                    <h3>1949 Dodge</h3>
+                    <span class="vehicle-price">$1,738</span>
+                    <p>Named the Slug, bought from Bob Garrity, my mentor. This is what it looked like when I sold it,
+                        was a real pretty black color when I bought it. Bob ended up drowning near Willapa Bay a few
+                        years ago.</p>
+                </div>
+            </div>
+            <!-- 9: image17.png = 1954 Nash Rambler -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image17.png" alt="1954 Nash Rambler">
+                <div class="vehicle-info">
+                    <h3>1954 Nash Rambler</h3>
+                    <span class="vehicle-price">$1,618</span>
+                    <p>Bought from Mike Dawson, I think this was the model. Drove to Mexico with Peterson, this one
+                        ended up in the junk yard after struggling back to Seattle and suffering a major indignity
+                        during and afterwards.</p>
+                </div>
+            </div>
+            <!-- 10: image27.png = 1955 Pontiac -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image27.png" alt="1955 Pontiac">
+                <div class="vehicle-info">
+                    <h3>1955 Pontiac</h3>
+                    <span class="vehicle-price">$2,105</span>
+                    <p>From Gjersee, sold to Gary who put 4 on the floor. Second favorite car. There is an interesting
+                        story about a young cop getting shot in this car.</p>
+                </div>
+            </div>
+            <!-- 11: image24.png = 1956 Chevrolet Coupe -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image24.png" alt="1956 Chevrolet Coupe">
+                <div class="vehicle-info">
+                    <h3>1956 Chevrolet Coupe</h3>
+                    <span class="vehicle-price">$1,912</span>
+                    <p>From Kniss. Burned oil like crazy.</p>
+                </div>
+            </div>
+            <!-- 12: image26.png = 1963 Volvo pv544 -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image26.png" alt="1963 Volvo pv544">
+                <div class="vehicle-info">
+                    <h3>1963 Volvo pv544</h3>
+                    <span class="vehicle-price">$2,095</span>
+                    <p>First new car, got stuck in the Ocean one night, totaled it.</p>
+                </div>
+            </div>
+            <!-- 13: image13.png = 1960 Volvo -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image13.png" alt="1960 Volvo">
+                <div class="vehicle-info">
+                    <h3>1960 Volvo</h3>
+                    <span class="vehicle-price">$1,995</span>
+                    <p>Not as nice as the stuck in the Ocean version.</p>
+                </div>
+            </div>
+            <!-- 14: image33.png = 1961 Triumph TR3 -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image33.png" alt="1961 Triumph TR3">
+                <div class="vehicle-info">
+                    <h3>1961 Triumph TR3</h3>
+                    <span class="vehicle-price">$3,050</span>
+                    <p>Blue. Drag your knuckles on the ground while driving.</p>
+                </div>
+            </div>
+            <!-- 15: image23.png = 1963 Pontiac Grand Prix -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image23.png" alt="1963 Pontiac Grand Prix">
+                <div class="vehicle-info">
+                    <h3>1963 Pontiac Grand Prix</h3>
+                    <span class="vehicle-price">$3,827</span>
+                    <p>I loaned this to Beth before we were married to drive to work. Had from 1967 to 1969.</p>
+                </div>
+            </div>
+            <!-- 16: image32.png = 1972 Chevrolet Vega -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image32.png" alt="1972 Chevrolet Vega">
+                <div class="vehicle-info">
+                    <h3>1972 Chevrolet Vega</h3>
+                    <span class="vehicle-price">$2,196</span>
+                    <p>We bought this one new, blew the engine. We bought one and so did Dapper.</p>
+                </div>
+            </div>
+            <!-- 17: image25.png = 1972 Ford Mustang -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image25.png" alt="1972 Ford Mustang">
+                <div class="vehicle-info">
+                    <h3>1972 Ford Mustang</h3>
+                    <span class="vehicle-price">$2,900</span>
+                    <p>$3000 new. Shoulda kept it.</p>
+                </div>
+            </div>
+            <!-- 18: image31.png = 1960 TR-3 -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image31.png" alt="1960 TR-3">
+                <div class="vehicle-info">
+                    <h3>1960 TR-3</h3>
+                    <span class="vehicle-price">$3,050</span>
+                    <p>Bought in 1973 – Favorite car of all time for me. Had to sell to get an adult car with 2 kids.
+                        Sold for $1,000 in 1974. Current value is about $22,000. Whoops </p>
+                </div>
+            </div>
+            <!-- 19: image29.png = Yamaha 80CC -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Motorcycle</div>
+                <img src="assets/cars/image29.png" alt="Yamaha 80CC">
+                <div class="vehicle-info">
+                    <h3>Yamaha 80CC</h3>
+                    <span class="vehicle-price">$490</span>
+                    <p>Amazing how much power you have with 80 CC.</p>
+                </div>
+            </div>
+            <!-- 20: image34.png = Bultaco Matador -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Motorcycle</div>
+                <img src="assets/cars/image34.png" alt="Bultaco Matador">
+                <div class="vehicle-info">
+                    <h3>Bultaco Matador</h3>
+                    <span class="vehicle-price">$875</span>
+                    <p>FUN, did a lot of hill climbing and off road stuff.</p>
+                </div>
+            </div>
+            <!-- 21: image7.png = 63 BSA Gold Star -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Motorcycle</div>
+                <img src="assets/cars/image7.png" alt="63 BSA Gold Star">
+                <div class="vehicle-info">
+                    <h3>63 BSA Gold Star</h3>
+                    <span class="vehicle-price">$720</span>
+                    <p>One lung, Hard to start but fun once it did. Beth rode on this one and loved it (I think).
+                        Difficult Bike.</p>
+                </div>
+            </div>
+            <!-- 22: image2.png = 1969 BSA Thunderbolt -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Motorcycle</div>
+                <img src="assets/cars/image2.png" alt="1969 BSA Thunderbolt">
+                <div class="vehicle-info">
+                    <h3>1969 BSA Thunderbolt</h3>
+                    <span class="vehicle-price">$1,050</span>
+                    <p>Rode this one to California with Mike Irving. Great Bike. Rode the Big Sur a few times, once with
+                        Beth.</p>
+                </div>
+            </div>
+            <!-- 23: image5.png = 1963 Ford Van -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Van</div>
+                <img src="assets/cars/image5.png" alt="1963 Ford Van">
+                <div class="vehicle-info">
+                    <h3>1963 Ford Van</h3>
+                    <span class="vehicle-price">$2,349</span>
+                    <p>Kids rode around in back in a play pen. They slept well while travelling, we don't sleep so well
+                        now thinking about how dangerous it was.</p>
+                </div>
+            </div>
+            <!-- 24: image22.png = 1977 Ford Van -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Van</div>
+                <img src="assets/cars/image22.png" alt="1977 Ford Van">
+                <div class="vehicle-info">
+                    <h3>1977 Ford Van</h3>
+                    <span class="vehicle-price">$5,400</span>
+                    <p>Made into a camper. The girls got their first and only spanking on a quarrelsome trip to Idaho in
+                        this Van.</p>
+                </div>
+            </div>
+            <!-- 25: image10.png = 1981 Datsun Station Wagon -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image10.png" alt="1981 Datsun Station Wagon">
+                <div class="vehicle-info">
+                    <h3>1981 Datsun Station Wagon</h3>
+                    <span class="vehicle-price">$6,150</span>
+                    <p>Compact piece of junk.</p>
+                </div>
+            </div>
+            <!-- 26: image3.png = 1979 Fiat Spider -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image3.png" alt="1979 Fiat Spider">
+                <div class="vehicle-info">
+                    <h3>1979 Fiat Spider</h3>
+                    <span class="vehicle-price">$7,790</span>
+                    <p>Nice car.</p>
+                </div>
+            </div>
+            <!-- 27: image1.png = 1986 Peugeot 505 Turbo -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image1.png" alt="1986 Peugeot 505 Turbo">
+                <div class="vehicle-info">
+                    <h3>1986 Peugeot 505 Turbo</h3>
+                    <span class="vehicle-price">$17,200</span>
+                    <p>Turbo blew TWICE, OK car but expensive to own.</p>
+                </div>
+            </div>
+            <!-- 28: image4.png = 1987 Jeep -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Jeep</div>
+                <img src="assets/cars/image4.png" alt="1987 Jeep">
+                <div class="vehicle-info">
+                    <h3>1987 Jeep</h3>
+                    <span class="vehicle-price">$9,800</span>
+                    <p>Robyn and Lisa learned to drive in this, both abused the poor thing. They shared an exciting
+                        experience when they spun out on I90 driving up to the pass in the snow.</p>
+                </div>
+            </div>
+            <!-- 29: image9.png = 1981 Fiat Spider -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image9.png" alt="1981 Fiat Spider">
+                <div class="vehicle-info">
+                    <h3>1981 Fiat Spider</h3>
+                    <span class="vehicle-price">$10,490</span>
+                    <p>Another nice car.</p>
+                </div>
+            </div>
+            <!-- 30: image19.png = 1989 Alfa Spyder Veloce -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image19.png" alt="1989 Alfa Spyder Veloce">
+                <div class="vehicle-info">
+                    <h3>1989 Alfa Spyder Veloce</h3>
+                    <span class="vehicle-price">$17,500</span>
+                    <p>Had from 1990 till 2017. Great car, should have driven it more.</p>
+                </div>
+            </div>
+            <!-- 31: image21.png = 1997 Lexus ES 300 -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image21.png" alt="1997 Lexus ES 300">
+                <div class="vehicle-info">
+                    <h3>1997 Lexus ES 300</h3>
+                    <span class="vehicle-price">$29,995</span>
+                    <p>Should have lasted forever.</p>
+                </div>
+            </div>
+            <!-- 32: image18.png = 1990 Ford Pickup -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Truck</div>
+                <img src="assets/cars/image18.png" alt="1990 Ford Pickup">
+                <div class="vehicle-info">
+                    <h3>1990 Ford Pickup</h3>
+                    <span class="vehicle-price">$12,100</span>
+                    <p>From Bill Small. Good truck, 4WD.</p>
+                </div>
+            </div>
+            <!-- 33: image28.png = 2003 Ford Pickup -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Truck</div>
+                <img src="assets/cars/image28.png" alt="2003 Ford Pickup">
+                <div class="vehicle-info">
+                    <h3>2003 Ford Pickup</h3>
+                    <span class="vehicle-price">$21,500</span>
+                    <p>Great truck, standard shift with roll up windows. Mitch & Lisa now are the proud owners of this
+                        classic.</p>
+                </div>
+            </div>
+            <!-- 34: image20.png = 2012 Lexus ES 350 -->
+            <div class="vehicle-card">
+                <div class="vehicle-tag">Car</div>
+                <img src="assets/cars/image20.png" alt="2012 Lexus ES 350">
+                <div class="vehicle-info">
+                    <h3>2012 Lexus ES 350</h3>
+                    <span class="vehicle-price">$38,520</span>
+                    <p>Maybe our last car? Who knows. They should last forever??</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #0a0a0a;">
+        <p>&copy; 2026 The Fidler Family. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(17, 17, 17, 0.9)';
+                navbar.style.borderBottom = '1px solid #333';
+            } else {
+                navbar.style.background = 'transparent';
+                navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+
+</html>

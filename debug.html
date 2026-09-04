@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; background: #fff; color: #000; }
+        .grid { display: flex; flex-wrap: wrap; }
+        .item { margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; width: 300px; }
+        .item img { max-width: 100%; height: auto; }
+        .item h3 { font-size: 16px; margin: 5px 0 0 0; }
+    </style>
+</head>
+<body>
+    <h1>Image Debugger</h1>
+    <div class="grid">
+        <script>
+            for (let i = 1; i <= 34; i++) {
+                document.write(`
+                    <div class="item">
+                        <img src="assets/cars/image${i}.png">
+                        <h3>image${i}.png</h3>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+</body>
+</html>
