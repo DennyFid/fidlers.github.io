@@ -1,6 +1,7 @@
 # Run locally
 
-Using Python (Built-in Web Server)
+## Using Python (Built-in Web Server)
+
 Open PowerShell or your terminal in c:\GIT\fidlers.github.io and run:
 
 powershell    python -m http.server 8000

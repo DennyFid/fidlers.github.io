@@ -8,23 +8,25 @@
     <style>
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
         .gallery-item {
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
             transition: var(--transition);
+            background: #fff;
         }
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
     </style>
@@ -37,7 +39,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="family.html">Our Tree</a></li>
             <li><a href="photos.html" class="active">Gallery</a></li>
-            <li><a href="blog.html">News</a></li>
             <li><a href="cars.html">Denny's Cars</a></li>
         </ul>
     </nav>
@@ -54,16 +55,7 @@
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b91552d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Family gathering">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vacation">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meeting">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Celebration">
+                <img src="assets/cat_raccoon_fence.jpg" alt="Cat and raccoon on fence">
             </div>
         </div>
     </main>

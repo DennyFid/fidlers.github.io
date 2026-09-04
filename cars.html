@@ -19,11 +19,14 @@
         }
 
         .garage-hero h1 {
-            font-size: 4rem;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .showroom {
@@ -110,21 +113,6 @@
             font-size: 1.05rem;
             line-height: 1.6;
         }
-
-        .vehicle-tag {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--accent-color);
-            color: #fff;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 2;
-        }
     </style>
 </head>
 
@@ -136,24 +124,21 @@
             <li><a href="index.html" style="color: #fff;">Home</a></li>
             <li><a href="family.html" style="color: #fff;">Our Tree</a></li>
             <li><a href="photos.html" style="color: #fff;">Gallery</a></li>
-            <li><a href="blog.html" style="color: #fff;">News</a></li>
             <li><a href="cars.html" class="active" style="color: var(--accent-color);">Denny's Cars</a></li>
         </ul>
     </nav>
 
     <header class="garage-hero">
         <div>
-            <h1>Denny's Garage</h1>
-            <p style="font-size: 1.5rem; margin-top: 1rem; color: #aaa;">A showcase of cars, trucks, and motorcycles</p>
+            <h1>Denny's old cars, trucks and motorcycles</h1>
+            <p style="font-size: 1.05rem; margin-top: 1.25rem; color: #bbb; font-style: italic;">Please note: Pictures shown are representative images and not original photos of the actual vehicles.</p>
         </div>
     </header>
 
     <main class="showroom">
-        <h2 class="section-title">The Collection</h2>
         <div class="vehicle-grid">
             <!-- 1: image14.png = 1941 Chevrolet Coupe -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image14.png" alt="1941 Chevrolet Coupe">
                 <div class="vehicle-info">
                     <h3>1941 Chevrolet Coupe</h3>
@@ -164,7 +149,6 @@
             </div>
             <!-- 2: image12.png = 1929 Chrysler Roadster -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image12.png" alt="1929 Chrysler Roadster">
                 <div class="vehicle-info">
                     <h3>1929 Chrysler Roadster</h3>
@@ -175,7 +159,6 @@
             </div>
             <!-- 3: image15.png = 1934 Chevrolet -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image15.png" alt="1934 Chevrolet">
                 <div class="vehicle-info">
                     <h3>1934 Chevrolet</h3>
@@ -185,7 +168,6 @@
             </div>
             <!-- 4: image8.png = 1951 Ford Convertible -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image8.png" alt="1951 Ford Convertible">
                 <div class="vehicle-info">
                     <h3>1951 Ford Convertible</h3>
@@ -195,7 +177,6 @@
             </div>
             <!-- 5: image16.png = 1950 Ford Sedan -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image16.png" alt="1950 Ford Sedan">
                 <div class="vehicle-info">
                     <h3>1950 Ford Sedan</h3>
@@ -205,7 +186,6 @@
             </div>
             <!-- 6: image6.png = 1947 Mercury -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image6.png" alt="1947 Mercury">
                 <div class="vehicle-info">
                     <h3>1947 Mercury</h3>
@@ -215,7 +195,6 @@
             </div>
             <!-- 7: image11.png = 1949 Chevrolet Convertible -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image11.png" alt="1949 Chevrolet Convertible">
                 <div class="vehicle-info">
                     <h3>1949 Chevrolet Convertible</h3>
@@ -225,7 +204,6 @@
             </div>
             <!-- 8: image30.png = 1949 Dodge -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image30.png" alt="1949 Dodge">
                 <div class="vehicle-info">
                     <h3>1949 Dodge</h3>
@@ -237,7 +215,6 @@
             </div>
             <!-- 9: image17.png = 1954 Nash Rambler -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image17.png" alt="1954 Nash Rambler">
                 <div class="vehicle-info">
                     <h3>1954 Nash Rambler</h3>
@@ -249,7 +226,6 @@
             </div>
             <!-- 10: image27.png = 1955 Pontiac -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image27.png" alt="1955 Pontiac">
                 <div class="vehicle-info">
                     <h3>1955 Pontiac</h3>
@@ -260,7 +236,6 @@
             </div>
             <!-- 11: image24.png = 1956 Chevrolet Coupe -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image24.png" alt="1956 Chevrolet Coupe">
                 <div class="vehicle-info">
                     <h3>1956 Chevrolet Coupe</h3>
@@ -270,7 +245,6 @@
             </div>
             <!-- 12: image26.png = 1963 Volvo pv544 -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image26.png" alt="1963 Volvo pv544">
                 <div class="vehicle-info">
                     <h3>1963 Volvo pv544</h3>
@@ -280,7 +254,6 @@
             </div>
             <!-- 13: image13.png = 1960 Volvo -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image13.png" alt="1960 Volvo">
                 <div class="vehicle-info">
                     <h3>1960 Volvo</h3>
@@ -290,7 +263,6 @@
             </div>
             <!-- 14: image33.png = 1961 Triumph TR3 -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image33.png" alt="1961 Triumph TR3">
                 <div class="vehicle-info">
                     <h3>1961 Triumph TR3</h3>
@@ -300,7 +272,6 @@
             </div>
             <!-- 15: image23.png = 1963 Pontiac Grand Prix -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image23.png" alt="1963 Pontiac Grand Prix">
                 <div class="vehicle-info">
                     <h3>1963 Pontiac Grand Prix</h3>
@@ -310,7 +281,6 @@
             </div>
             <!-- 16: image32.png = 1972 Chevrolet Vega -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image32.png" alt="1972 Chevrolet Vega">
                 <div class="vehicle-info">
                     <h3>1972 Chevrolet Vega</h3>
@@ -320,7 +290,6 @@
             </div>
             <!-- 17: image25.png = 1972 Ford Mustang -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image25.png" alt="1972 Ford Mustang">
                 <div class="vehicle-info">
                     <h3>1972 Ford Mustang</h3>
@@ -330,7 +299,6 @@
             </div>
             <!-- 18: image31.png = 1960 TR-3 -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image31.png" alt="1960 TR-3">
                 <div class="vehicle-info">
                     <h3>1960 TR-3</h3>
@@ -341,7 +309,6 @@
             </div>
             <!-- 19: image29.png = Yamaha 80CC -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Motorcycle</div>
                 <img src="assets/cars/image29.png" alt="Yamaha 80CC">
                 <div class="vehicle-info">
                     <h3>Yamaha 80CC</h3>
@@ -351,7 +318,6 @@
             </div>
             <!-- 20: image34.png = Bultaco Matador -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Motorcycle</div>
                 <img src="assets/cars/image34.png" alt="Bultaco Matador">
                 <div class="vehicle-info">
                     <h3>Bultaco Matador</h3>
@@ -361,7 +327,6 @@
             </div>
             <!-- 21: image7.png = 63 BSA Gold Star -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Motorcycle</div>
                 <img src="assets/cars/image7.png" alt="63 BSA Gold Star">
                 <div class="vehicle-info">
                     <h3>63 BSA Gold Star</h3>
@@ -372,7 +337,6 @@
             </div>
             <!-- 22: image2.png = 1969 BSA Thunderbolt -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Motorcycle</div>
                 <img src="assets/cars/image2.png" alt="1969 BSA Thunderbolt">
                 <div class="vehicle-info">
                     <h3>1969 BSA Thunderbolt</h3>
@@ -383,7 +347,6 @@
             </div>
             <!-- 23: image5.png = 1963 Ford Van -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Van</div>
                 <img src="assets/cars/image5.png" alt="1963 Ford Van">
                 <div class="vehicle-info">
                     <h3>1963 Ford Van</h3>
@@ -394,7 +357,6 @@
             </div>
             <!-- 24: image22.png = 1977 Ford Van -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Van</div>
                 <img src="assets/cars/image22.png" alt="1977 Ford Van">
                 <div class="vehicle-info">
                     <h3>1977 Ford Van</h3>
@@ -405,7 +367,6 @@
             </div>
             <!-- 25: image10.png = 1981 Datsun Station Wagon -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image10.png" alt="1981 Datsun Station Wagon">
                 <div class="vehicle-info">
                     <h3>1981 Datsun Station Wagon</h3>
@@ -415,7 +376,6 @@
             </div>
             <!-- 26: image3.png = 1979 Fiat Spider -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image3.png" alt="1979 Fiat Spider">
                 <div class="vehicle-info">
                     <h3>1979 Fiat Spider</h3>
@@ -425,7 +385,6 @@
             </div>
             <!-- 27: image1.png = 1986 Peugeot 505 Turbo -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image1.png" alt="1986 Peugeot 505 Turbo">
                 <div class="vehicle-info">
                     <h3>1986 Peugeot 505 Turbo</h3>
@@ -435,7 +394,6 @@
             </div>
             <!-- 28: image4.png = 1987 Jeep -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Jeep</div>
                 <img src="assets/cars/image4.png" alt="1987 Jeep">
                 <div class="vehicle-info">
                     <h3>1987 Jeep</h3>
@@ -446,7 +404,6 @@
             </div>
             <!-- 29: image9.png = 1981 Fiat Spider -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image9.png" alt="1981 Fiat Spider">
                 <div class="vehicle-info">
                     <h3>1981 Fiat Spider</h3>
@@ -456,7 +413,6 @@
             </div>
             <!-- 30: image19.png = 1989 Alfa Spyder Veloce -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image19.png" alt="1989 Alfa Spyder Veloce">
                 <div class="vehicle-info">
                     <h3>1989 Alfa Spyder Veloce</h3>
@@ -466,7 +422,6 @@
             </div>
             <!-- 31: image21.png = 1997 Lexus ES 300 -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image21.png" alt="1997 Lexus ES 300">
                 <div class="vehicle-info">
                     <h3>1997 Lexus ES 300</h3>
@@ -476,7 +431,6 @@
             </div>
             <!-- 32: image18.png = 1990 Ford Pickup -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Truck</div>
                 <img src="assets/cars/image18.png" alt="1990 Ford Pickup">
                 <div class="vehicle-info">
                     <h3>1990 Ford Pickup</h3>
@@ -486,7 +440,6 @@
             </div>
             <!-- 33: image28.png = 2003 Ford Pickup -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Truck</div>
                 <img src="assets/cars/image28.png" alt="2003 Ford Pickup">
                 <div class="vehicle-info">
                     <h3>2003 Ford Pickup</h3>
@@ -497,7 +450,6 @@
             </div>
             <!-- 34: image20.png = 2012 Lexus ES 350 -->
             <div class="vehicle-card">
-                <div class="vehicle-tag">Car</div>
                 <img src="assets/cars/image20.png" alt="2012 Lexus ES 350">
                 <div class="vehicle-info">
                     <h3>2012 Lexus ES 350</h3>

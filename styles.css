@@ -106,7 +106,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('assets/hero.png') center/cover no-repeat;
+  background: url('assets/home_hero.jpg') center/cover no-repeat;
   padding-top: 80px;
 }
 
