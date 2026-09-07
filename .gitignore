@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+# Build
+dist/
+build/
+coverage/
+
+# Editor directories
+.vscode/
+.idea/
+
+# Temporary
+.tmp/
+.cache/
+
+# Copilot snapshots and workspace caches
+CopilotSnapshots/
+.package-lock.json
