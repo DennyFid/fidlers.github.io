@@ -19,6 +19,9 @@ jobs:
           fetch-depth: 0
           lfs: true
 
+      - name: Replace LFS pointers with actual files
+        run: git lfs checkout
+
       - name: Setup Node (optional)
         uses: actions/setup-node@v4
         with:
