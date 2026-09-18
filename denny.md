@@ -113,3 +113,17 @@ Resolve-DnsName www.fidlers.com -Type CNAME
 
 Or check globally at:
 👉 **<https://dnschecker.org/#A/fidlers.com>**
+
+Steps to convert from LFS back to GitHub Pages:
+ 
+1. 
+git rm --cached -- 'assets/cars/FordRanger.jpg'
+This will not delete the actual 5.89 MB image from your computer.
+
+2. Run:
+git add assets/cars/FordRanger.jpg
+
+3.Then run:
+git status
+
+then commit and push
