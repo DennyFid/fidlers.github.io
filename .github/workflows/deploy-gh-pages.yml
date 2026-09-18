@@ -2,7 +2,8 @@ name: Deploy to gh-pages (include LFS)
 
 on:
   push:
-	branches: [ live ]
+	branches:
+	  - live
   workflow_dispatch:
 
 jobs:
