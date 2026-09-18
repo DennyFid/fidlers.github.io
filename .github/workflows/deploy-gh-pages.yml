@@ -27,10 +27,17 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Prepare files for GitHub Pages
+        run: |
+          git lfs pull
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='.github' ./ _site/
+          rm -f _site/.gitattributes
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./_site
           publish_branch: gh-pages
           allow_empty_commit: true
