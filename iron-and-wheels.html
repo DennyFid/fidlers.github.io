@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark's Iron &amp; Wheels - Fidler Family</title>
+    <meta name="description" content="Mark's rolling stock history from the days of delivering papers in the old pedal car to his current project.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body.dark-theme {
+            background: #111;
+            color: #fff;
+        }
+
+        .dark-theme .navbar {
+            background: rgba(17, 17, 17, 0.85);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-theme .logo {
+            color: #fff;
+        }
+
+        .dark-theme .nav-links a {
+            color: #ddd;
+        }
+
+        .dark-theme .nav-links a:hover,
+        .dark-theme .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .iron-hero {
+            height: 60vh;
+            padding-top: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.9)),
+                url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .iron-hero .hero-content {
+            max-width: 900px;
+            padding: 0 1.5rem;
+        }
+
+        .iron-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .iron-hero p.hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: #e2e8f0;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .iron-showroom {
+            background-color: #111;
+            color: #fff;
+            padding: 5rem 2rem;
+            min-height: 50vh;
+        }
+
+        .iron-showroom .section-title {
+            color: #fff;
+        }
+
+        .iron-showroom .section-title::after {
+            background: var(--accent-color);
+        }
+
+        .coming-soon-panel {
+            max-width: 850px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-wip {
+            display: inline-block;
+            background: rgba(217, 119, 6, 0.2);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .coming-soon-panel h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .coming-soon-panel p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .dark-theme footer {
+            background: #0a0a0a;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Fidler Family</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="family.html">Our Tree</a></li>
+            <li><a href="photos.html">Gallery</a></li>
+            <li><a href="comments.html">Comments</a></li>
+            <li><a href="cars.html">Denny's Cars</a></li>
+            <li><a href="iron-and-wheels.html" class="active">Mark's Iron &amp; Wheels</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero iron-hero">
+        <div class="hero-content">
+            <h1>Mark's Iron &amp; Wheels</h1>
+            <p class="hero-subtitle">Mark's rolling stock history from the days of delivering papers in the old pedal car to his current project.</p>
+        </div>
+    </header>
+
+    <main class="iron-showroom">
+        <div class="container">
+            <h2 class="section-title">Rolling Stock Archive</h2>
+
+            <div class="coming-soon-panel">
+                <span class="badge-wip">Under Construction</span>
+                <h3>Vehicles &amp; Projects Coming Soon</h3>
+                <p>The chronicle of pedal cars, classic cruisers, trucks, rebuilds, and ongoing garage projects is currently being assembled. Check back soon for the full inventory and stories!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Fidler Family. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
