@@ -1,35 +1,27 @@
-# Run locally
+# Run Locally
 
-## Using Python (Built-in Web Server)
-
-Open PowerShell or your terminal in c:\GIT\fidlers.github.io and run:
-
-powershell    python -m http.server 8000
-Then open your browser and go to: 👉 <http://localhost:8000>
-
-# Steps to Convert fidlers.com (Namecheap) from Google Sites to fidlers.github.io
-
-## Quick Reference: Run Locally
-
-In PowerShell:
+In PowerShell or terminal in `c:\GIT\fidlers.github.io`:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Then open browser to: 👉 <http://localhost:8000>
+Then open your browser and go to: 👉 <http://localhost:8000>
 
 ---
 
-## How to Point Custom Domain (`fidlers.com`) to GitHub Pages
+## Steps to Convert fidlers.com (Namecheap) from Google Sites to fidlers.github.io
 
-Follow these steps to transition your domain **`fidlers.com`** hosted at **Namecheap** from your old Google Site to **`fidlers.github.io`**.
+### How to Point Custom Domain (`fidlers.com`) to GitHub Pages
+
+Follow these steps to transition your domain **`fidlers.com`** hosted at
+**Namecheap** from your old Google Site to **`fidlers.github.io`**.
 
 ---
 
 ### Step 1: Log in to Namecheap
 
-1. Go to [https://www.namecheap.com](https://www.namecheap.com) and sign in.
+1. Go to [Namecheap](https://www.namecheap.com) and sign in.
 2. Go to your **Dashboard** or click **Domain List** in the left menu.
 3. Locate **`fidlers.com`** and click the **Manage** button on the right.
 4. Click on the **Advanced DNS** tab at the top.
@@ -41,7 +33,8 @@ Follow these steps to transition your domain **`fidlers.com`** hosted at **Namec
 Under the **Host Records** table:
 
 1. Find any existing records pointing to Google Sites:
-   - A **CNAME Record** with Host `www` (or `@`) pointing to `ghs.googlehosted.com`.
+   - A **CNAME Record** with Host `www` (or `@`) pointing to
+     `ghs.googlehosted.com`.
    - Any Google site verification **TXT** records (if no longer needed).
 2. Click the **Trash / Delete** icon to remove them so they don't conflict.
 
@@ -70,7 +63,8 @@ Click **Add New Record**:
 | :--- | :--- | :--- | :--- |
 | **CNAME Record** | `www` | `fidlers.github.io.` | Automatic |
 
-*(Note: If Namecheap rejects the dot at the end, enter `fidlers.github.io` without the dot).*
+*(Note: If Namecheap rejects the dot at the end, enter `fidlers.github.io`
+without the dot).*
 
 Click **Save all changes**.
 
@@ -88,15 +82,18 @@ Click **Save all changes**.
    ```
 
 4. Click **Save**.
-   - GitHub will verify the DNS records and automatically commit a `CNAME` file to the root of your repo.
+   - GitHub will verify the DNS records and automatically commit a `CNAME`
+     file to the root of your repo.
 
 ---
 
 ### Step 5: Enforce HTTPS (SSL Certificate)
 
-1. On the same GitHub Pages settings page, wait until the DNS check displays: **"DNS check successful"**.
+1. On the same GitHub Pages settings page, wait until the DNS check displays:
+   **"DNS check successful"**.
 2. Check the box for **Enforce HTTPS**.
-   *(Note: Certificate generation can take 15–30 minutes. If the checkbox is greyed out initially, check back shortly).*
+   *(Note: Certificate generation can take 15–30 minutes. If the checkbox is
+   greyed out initially, check back shortly).*
 
 ---
 
@@ -114,16 +111,28 @@ Resolve-DnsName www.fidlers.com -Type CNAME
 Or check globally at:
 👉 **<https://dnschecker.org/#A/fidlers.com>**
 
-Steps to convert from LFS back to GitHub Pages:
- 
-1. 
-git rm --cached -- 'assets/cars/FordRanger.jpg'
-This will not delete the actual 5.89 MB image from your computer.
+---
 
-2. Run:
-git add assets/cars/FordRanger.jpg
+## Steps to Convert from LFS back to GitHub Pages
 
-3.Then run:
-git status
+1. Remove cached LFS pointer:
 
-then commit and push
+   ```powershell
+   git rm --cached -- 'assets/cars/FordRanger.jpg'
+   ```
+
+   *(This will not delete the actual image file from your computer).*
+
+2. Re-add the file as a standard Git object:
+
+   ```powershell
+   git add assets/cars/FordRanger.jpg
+   ```
+
+3. Commit and push:
+
+   ```powershell
+   git status
+   git commit -m "Revert FordRanger.jpg from LFS back to standard Git format"
+   git push
+   ```
