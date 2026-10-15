@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Cars &amp; Motos - Fidler Family</title>
+    <meta name="description"
+        content="Mark's rolling stock history from the days of delivering papers in the old pedal car to his current projects.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .garage-hero {
+            height: 60vh;
+            padding-top: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.9)),
+                url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .garage-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .showroom {
+            background-color: #111;
+            color: #fff;
+            padding: 5rem 2rem;
+            min-height: 100vh;
+        }
+
+        .showroom .section-title {
+            color: #fff;
+        }
+
+        .showroom .section-title::after {
+            background: var(--accent-color);
+        }
+
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .vehicle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vehicle-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #1a1a1a;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(217, 119, 6, 0.2);
+            border-color: rgba(217, 119, 6, 0.35);
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .vehicle-info {
+            padding: 2rem;
+            background: #1a1a1a;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vehicle-info h3 {
+            color: var(--accent-color);
+            font-size: 1.85rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .vehicle-badge,
+        .vehicle-price {
+            display: inline-block;
+            background: rgba(217, 119, 6, 0.15);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .vehicle-info p {
+            color: #ddd;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body style="background: #111;">
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo" style="color: #fff;">Fidler Family</a>
+        <ul class="nav-links">
+            <li><a href="index.html" style="color: #fff;">Home</a></li>
+            <li><a href="family.html" style="color: #fff;">Our Tree</a></li>
+            <li><a href="photos.html" style="color: #fff;">Gallery</a></li>
+            <li><a href="comments.html" style="color: #fff;">Comments</a></li>
+            <li><a href="cars.html" style="color: #fff;">Denny's Cars</a></li>
+            <li><a href="marks-cars-and-motos.html" class="active" style="color: var(--accent-color);">Mark's Cars &amp;
+                    Motos</a></li>
+        </ul>
+    </nav>
+
+    <header class="garage-hero">
+        <div>
+            <h1>Marks Cars &amp; Motos</h1>
+            <p style="font-size: 1.05rem; margin-top: 1.25rem; color: #bbb; font-style: italic;">Mark's rolling stock
+                history from the days of delivering papers in the old pedal car to his current project.</p>
+        </div>
+    </header>
+
+    <main class="showroom">
+        <div class="vehicle-grid">
+            <!-- 1: 1970 Schwinn Bicycle -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image01.png" alt="1970 Schwinn Bicycle">
+                <div class="vehicle-info">
+                    <h3>1970 Schwinn Bicycle</h3>
+                    <span class="vehicle-badge">Classic Bicycle</span>
+                    <p>The quintessential 1970s American neighborhood cruiser. Built with heavy-duty Chicago steel, a
+                        banana seat, and high-rise handlebars, ready for cruising the block from morning until the
+                        streetlights came on.</p>
+                </div>
+            </div>
+
+            <!-- 2: Pedal car -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image02.png" alt="Pedal car">
+                <div class="vehicle-info">
+                    <h3>Pedal Car</h3>
+                    <span class="vehicle-badge">Pedal Power</span>
+                    <p>Mark's very first taste of wheeled independence—the classic red Fire Chief pedal car. Used for
+                        delivering papers around the neighborhood and getting early miles behind the wheel before
+                        upgrading to horsepower.</p>
+                </div>
+            </div>
+
+            <!-- 3: 1970 Briggs and Stratton mini-bike -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image03.png" alt="1970 Briggs and Stratton mini-bike">
+                <div class="vehicle-info">
+                    <h3>1970 Briggs &amp; Stratton Mini-Bike</h3>
+                    <span class="vehicle-badge">Vintage Mini-Bike</span>
+                    <p>Powered by the classic pull-start lawnmower engine that started a generation of motorheads. Loud,
+                        fast, raw backyard fun with a centrifugal clutch, rigid frame, and plenty of thrills.</p>
+                </div>
+            </div>
+
+            <!-- 4: 1970 Redline Bicycle with Mag wheels -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image04.png" alt="1970 Redline Bicycle with Mag wheels">
+                <div class="vehicle-info">
+                    <h3>1970 Redline Bicycle with Mag Wheels</h3>
+                    <span class="vehicle-badge">BMX Pioneer</span>
+                    <p>An early pioneer of BMX culture featuring tough composite Mag wheels. Built for neighborhood dirt
+                        jumps, curb hops, and unmistakable retro street style.</p>
+                </div>
+            </div>
+
+            <!-- 5: 1970 EVI PPV pedal car -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image05.png" alt="1970 EVI PPV peddle car">
+                <div class="vehicle-info">
+                    <h3>1970 EVI PPV Pedal Car</h3>
+                    <span class="vehicle-badge">People Powered Vehicle</span>
+                    <p>The famous People Powered Vehicle (PPV) built by EVI during the 1970s fuel crisis. A futuristic
+                        two-passenger, three-wheeled pedal car featuring a lightweight fiberglass shell and dual
+                        independent pedaling.</p>
+                </div>
+            </div>
+
+            <!-- 6: 1969 Honda ZW50 minibike -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image06.png" alt="1969 Honda ZW50 minibike">
+                <div class="vehicle-info">
+                    <h3>1969 Honda ZW50 Minibike</h3>
+                    <span class="vehicle-badge">Trail Minibike</span>
+                    <p>The legendary Honda Mini Trail (Z50). Featuring an indestructible 49cc four-stroke engine,
+                        3-speed automatic clutch, and fold-down handlebars so it could pack into the car trunk for
+                        weekend trail riding.</p>
+                </div>
+            </div>
+
+            <!-- 7: 1978 Suzuki RM125 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image07.png" alt="1978 Suzuki RM125">
+                <div class="vehicle-info">
+                    <h3>1978 Suzuki RM125</h3>
+                    <span class="vehicle-badge">Motocross (125cc)</span>
+                    <p>A screaming yellow racing machine from the golden era of two-stroke dirt bikes. Famed for its
+                        long-travel suspension, razor-sharp cornering, and championship-winning motocross heritage.</p>
+                </div>
+            </div>
+
+            <!-- 8: 1980 Yamaha YZ125 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image08.png" alt="1980 Yamaha YZ125">
+                <div class="vehicle-info">
+                    <h3>1980 Yamaha YZ125</h3>
+                    <span class="vehicle-badge">Motocross (125cc)</span>
+                    <p>Yamaha's factory competition dirt bike sporting iconic yellow-and-black racing graphics and the
+                        pioneering Monoshock single-shock rear suspension that revolutionized motocross tracks.</p>
+                </div>
+            </div>
+
+            <!-- 9: 1972 Volkswagen Bug (light blue) -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image09.png" alt="1972 Volkswagen Bug (light blue)">
+                <div class="vehicle-info">
+                    <h3>1972 Volkswagen Bug (Light Blue)</h3>
+                    <span class="vehicle-badge">Air-Cooled Classic</span>
+                    <p>Finished in light blue with the unmistakable air-cooled flat-four rumble. Simple to wrench on,
+                        endlessly charismatic, and full of great memories on every drive.</p>
+                </div>
+            </div>
+
+            <!-- 10: 1982 Ford Pinto hatchback -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image10.png" alt="1982 Ford Pinto hatchback">
+                <div class="vehicle-info">
+                    <h3>1982 Ford Pinto Hatchback</h3>
+                    <span class="vehicle-badge">Classic Hatchback</span>
+                    <p>A definitive piece of early-80s American motoring history. Practical rear liftgate, honest
+                        four-cylinder power, and reliable daily transportation duty.</p>
+                </div>
+            </div>
+
+            <!-- 11: 1984 Audi 4000 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image11.png" alt="1984 Audi 4000">
+                <div class="vehicle-info">
+                    <h3>1984 Audi 4000</h3>
+                    <span class="vehicle-badge">European Sport Sedan</span>
+                    <p>Clean Giorgetto Giugiaro wedge lines, crisp steering, and refined German road manners. An
+                        engaging European sports sedan that was a joy to drive.</p>
+                </div>
+            </div>
+
+            <!-- 12: 1983 Honda CR480 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image12.png" alt="1983 Honda CR480">
+                <div class="vehicle-info">
+                    <h3>1983 Honda CR480</h3>
+                    <span class="vehicle-badge">Open-Class Motocross</span>
+                    <p>The ferocious big-bore air-cooled two-stroke beast. Renowned for its monstrous low-end torque,
+                        5-speed gearbox, and blistering open-class acceleration that demanded respect.</p>
+                </div>
+            </div>
+
+            <!-- 13: 1980 Chevrolet Monza hatchback -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image13.png" alt="1980 Chevrolet Monza hatchback">
+                <div class="vehicle-info">
+                    <h3>1980 Chevrolet Monza Hatchback</h3>
+                    <span class="vehicle-badge">Sport Hatchback</span>
+                    <p>Sporty 2+2 subcompact styling with a long sloping nose, fastback rear glass, and classic late-era
+                        GM rear-wheel-drive flair.</p>
+                </div>
+            </div>
+
+            <!-- 14: 2000 Chevrolet Silverado (lowered street look) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2000 Chevrolet Silverado (Lowered Street Look)</h3>
+                    <span class="vehicle-badge">Custom Street Truck</span>
+                    <p>Clean custom street truck styling featuring a lowered stance, smooth body lines, and dependable
+                        Chevy V8 muscle. Sleek, rumbling, and built to cruise.</p>
+                </div>
+            </div>
+
+            <!-- 15: 1980 Honda Accord -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image14.png" alt="1980 Honda Accord">
+                <div class="vehicle-info">
+                    <h3>1980 Honda Accord</h3>
+                    <span class="vehicle-badge">Classic Hatchback</span>
+                    <p>The car that set the benchmark for Japanese reliability and engineering excellence. Smooth
+                        5-speed manual shifting, great efficiency, and bulletproof durability.</p>
+                </div>
+            </div>
+
+            <!-- 16: 1968 Volkswagen Baja Bug (blue) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>1968 Volkswagen Baja Bug (Blue)</h3>
+                    <span class="vehicle-badge">Off-Road Baja Bug</span>
+                    <p>Built for kicking up roost on sand dunes and rugged dirt trails. Dressed in blue with trimmed
+                        fenders, tubular steel bash bars, and high-clearance off-road tires.</p>
+                </div>
+            </div>
+
+            <!-- 17: Yamaha YT125 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image15.png" alt="Yamaha YT125">
+                <div class="vehicle-info">
+                    <h3>Yamaha YT125</h3>
+                    <span class="vehicle-badge">Tri-Moto 3-Wheeler</span>
+                    <p>The classic Yamaha Tri-Moto three-wheeler ATV. Powered by a peppy 123cc two-stroke engine on
+                        balloon knobby tires, made for sliding around dirt trails and sand dunes.</p>
+                </div>
+            </div>
+
+            <!-- 18: 1966 Volkswagen Baja Bug (purple) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>1966 Volkswagen Baja Bug (Purple)</h3>
+                    <span class="vehicle-badge">Off-Road Baja Bug</span>
+                    <p>Another rugged desert conversion turned out in eye-catching purple. Stinger exhaust, chopped
+                        fiberglass bodywork, and air-cooled power ready for off-road fun.</p>
+                </div>
+            </div>
+
+            <!-- 19: Sandrail blue -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>Sandrail Blue</h3>
+                    <span class="vehicle-badge">Dune Buggy</span>
+                    <p>Custom open-cockpit sandrail featuring a lightweight tubular chassis finished in bright blue.
+                        High horsepower-to-weight ratio and rear paddle tires built for flying across sand dunes.</p>
+                </div>
+            </div>
+
+            <!-- 20: Sandrail red -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>Sandrail Red</h3>
+                    <span class="vehicle-badge">Dune Buggy</span>
+                    <p>The companion dune-carver in bold red. Stripped down to tubular steel, racing buckets, and
+                        air-cooled horsepower designed for carving bowls and climbing steep dunes.</p>
+                </div>
+            </div>
+
+            <!-- 21: 1969 Volkswagen Bug (street look) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>1969 Volkswagen Bug (Street Look)</h3>
+                    <span class="vehicle-badge">Custom Street Bug</span>
+                    <p>A dialed-in California street Bug. Lowered front beam, tucked stance, clean body lines, and a
+                        lively dual-carb engine built for boulevard cruising.</p>
+                </div>
+            </div>
+
+            <!-- 22: 1984 Chevrolet Camaro Z28 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image16.png" alt="1984 Chevrolet Camaro Z28">
+                <div class="vehicle-info">
+                    <h3>1984 Chevrolet Camaro Z28</h3>
+                    <span class="vehicle-badge">American Muscle</span>
+                    <p>The undisputed hero of 1980s American muscle. Sharp third-generation styling, aggressive
+                        aerodynamic ground effects, throaty V8 rumble, and unmistakable attitude.</p>
+                </div>
+            </div>
+
+            <!-- 23: 1984 BMW 318i -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image17.png" alt="1984 BMW 318i">
+                <div class="vehicle-info">
+                    <h3>1984 BMW 318i</h3>
+                    <span class="vehicle-badge">German Sport Sedan</span>
+                    <p>The iconic E30 generation chassis famed for its sublime steering feel, balanced 50:50 weight
+                        distribution, and timeless Bavarian sports sedan heritage.</p>
+                </div>
+            </div>
+
+            <!-- 24: 1984 Volkswagen GTI -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image18.png" alt="1984 Volkswagen GTI">
+                <div class="vehicle-info">
+                    <h3>1984 Volkswagen GTI</h3>
+                    <span class="vehicle-badge">Mk1 Hot Hatch</span>
+                    <p>The original hot hatch that started a worldwide revolution. Lightweight chassis, rev-happy
+                        fuel-injected engine, and razor-sharp cornering agility that made every drive an event.</p>
+                </div>
+            </div>
+
+            <!-- 25: 1974 Volkswagen Bus -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>1974 Volkswagen Bus</h3>
+                    <span class="vehicle-badge">Classic Transporter</span>
+                    <p>The legendary air-cooled Type 2 late-bay transporter. Loaded with personality, room for family
+                        and friends, and built for weekend camping trips and slow-lane adventures.</p>
+                </div>
+            </div>
+
+            <!-- 26: 2000 Audi A4 2.0T -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2000 Audi A4 2.0T</h3>
+                    <span class="vehicle-badge">Turbo Sport Sedan</span>
+                    <p>Clean European sport sedan styling paired with responsive turbocharged power, tight suspension
+                        tuning, and premium German interior craftsmanship.</p>
+                </div>
+            </div>
+
+            <!-- 27: 2002 Audi A4 3.0L -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2002 Audi A4 3.0L</h3>
+                    <span class="vehicle-badge">Quattro V6 Sedan</span>
+                    <p>Powered by a smooth 3.0-liter V6 and Audi's legendary Quattro all-wheel-drive system. Surefooted
+                        in all weather conditions with refined highway cruising luxury.</p>
+                </div>
+            </div>
+
+            <!-- 28: 2003 Ford F350 6.0L Crew Cab -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2003 Ford F350 6.0L Crew Cab</h3>
+                    <span class="vehicle-badge">Heavy-Duty Diesel Truck</span>
+                    <p>Heavy-duty Super Duty crew cab equipped with the 6.0L Power Stroke turbo diesel. Immense towing
+                        muscle, four full doors, and serious hauling capability.</p>
+                </div>
+            </div>
+
+            <!-- 29: 2000 Yamaha YZ250 -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2000 Yamaha YZ250</h3>
+                    <span class="vehicle-badge">Motocross (250cc)</span>
+                    <p>The benchmark of two-stroke motocross machinery. Lightning-fast throttle response, explosive
+                        mid-range hit, and nimble handling that made it a legend on tracks everywhere.</p>
+                </div>
+            </div>
+
+            <!-- 30: 2003 Yamaha YZ450F -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2003 Yamaha YZ450F</h3>
+                    <span class="vehicle-badge">4-Stroke Motocross</span>
+                    <p>The machine that ignited the modern four-stroke motocross era. Equipped with a potent 449cc
+                        engine, titanium valves, and a legendary 4-speed gearbox that hit hard everywhere.</p>
+                </div>
+            </div>
+
+            <!-- 31: 2004 Volkswagen Touareg v8 -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2004 Volkswagen Touareg V8</h3>
+                    <span class="vehicle-badge">Luxury V8 SUV</span>
+                    <p>Volkswagen's flagship luxury SUV powered by a muscular 4.2-liter V8 engine, advanced
+                        all-wheel-drive system, and genuine off-road capability wrapped in executive German comfort.</p>
+                </div>
+            </div>
+
+            <!-- 32: 1989 BMW R1200Gs -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>1989 BMW R1200GS</h3>
+                    <span class="vehicle-badge">Adventure Motorcycle</span>
+                    <p>The definitive globetrotting adventure motorcycle. Engineered around BMW's rugged boxer twin
+                        motor, shaft drive, and long-travel suspension built to conquer any road or trail.</p>
+                </div>
+            </div>
+
+            <!-- 33: 2005 Honda CRF450 -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2005 Honda CRF450</h3>
+                    <span class="vehicle-badge">4-Stroke Motocross</span>
+                    <p>Honda's lightweight aluminum-chassis motocross weapon. Unicam four-stroke engine technology
+                        delivering instant power, plush suspension, and race-winning track performance.</p>
+                </div>
+            </div>
+
+            <!-- 34: 2007 Yamaha YFZ450 (Quad) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2007 Yamaha YFZ450 (Quad)</h3>
+                    <span class="vehicle-badge">Sport ATV Quad</span>
+                    <p>High-performance sport ATV powered by a liquid-cooled 5-valve racing engine. Wide stance, low
+                        center of gravity, and race-tuned suspension built for carving tracks and flying over sand
+                        dunes.</p>
+                </div>
+            </div>
+
+            <!-- 35: 2008 Yamaha YFZ450 (Quad) -->
+            <div class="vehicle-card">
+                <div class="vehicle-info">
+                    <h3>2008 Yamaha YFZ450 (Quad)</h3>
+                    <span class="vehicle-badge">Sport ATV Quad</span>
+                    <p>The championship-proven high-performance quad. Refined chassis dynamics, blistering throttle
+                        response, and aggressive ergonomics engineered for high-speed dune riding.</p>
+                </div>
+            </div>
+
+            <!-- 36: 2005 Piaggio Vespa GT200 -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image19.png" alt="2005 Piaggio Vespa GT200">
+                <div class="vehicle-info">
+                    <h3>2005 Piaggio Vespa GT200</h3>
+                    <span class="vehicle-badge">Italian Scooter</span>
+                    <p>Timeless Italian styling paired with a punchy liquid-cooled 200cc four-stroke engine. Pressed
+                        steel monocoque body, smooth twist-and-go automatic drive, and effortless vintage flair.</p>
+                </div>
+            </div>
+
+            <!-- 37: 2017 Audi Q5 2.0T -->
+            <div class="vehicle-card">
+                <img src="assets/marks_cars/mark_image20.png" alt="2017 Audi Q5 2.0T">
+                <div class="vehicle-info">
+                    <h3>2017 Audi Q5 2.0T</h3>
+                    <span class="vehicle-badge">Quattro Luxury SUV</span>
+                    <p>Modern luxury, versatile utility, and all-weather confidence. Turbocharged 2.0-liter power
+                        combined with Quattro all-wheel drive, premium tech, and refined German engineering.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #0a0a0a;">
+        <p>&copy; 2026 The Fidler Family. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(17, 17, 17, 0.9)';
+                navbar.style.borderBottom = '1px solid #333';
+            } else {
+                navbar.style.background = 'transparent';
+                navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+
+</html>
